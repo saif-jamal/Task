@@ -1,0 +1,10 @@
+.imagePatient {
+  width: 100%;
+  height: 400px;
+  margin: 10px 0 70px 0;
+}
+.textshow {
+  font-size: 23px;
+  font-weight: 500px;
+  /* font-family: ; */
+}

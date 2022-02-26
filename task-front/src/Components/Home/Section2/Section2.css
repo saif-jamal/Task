@@ -1,0 +1,249 @@
+.Section2 #contact {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.Section2 .section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px "Oswald", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.Section2 .contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.Section2 .form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+.Section2 .form-control,
+.Section2 textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.Section2 .send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.Section2 .alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Section2 .send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px "Lato", sans-serif;
+  letter-spacing: 2px;
+}
+
+.Section2 .alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.Section2 .direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.Section2 .contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.Section2 .list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.Section2 .contact-text {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.Section2 .place {
+  margin-left: 62px;
+}
+
+.Section2 .phone {
+  margin-left: 56px;
+}
+
+.Section2 .gmail {
+  margin-left: 53px;
+}
+
+.Section2 .contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.Section2 .contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.Section2 .social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Section2 .social-media-list li a {
+  color: #fff;
+}
+
+.Section2 .social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.Section2 .social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.Section2 .social-media-list li:hover {
+  background-color: #fff;
+}
+
+.Section2 .social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.Section2 .social-media-list li:hover a {
+  color: #000;
+}
+
+.Section2 .copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.Section2 hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .Section2 .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .Section2 .direct-contact-container,
+  .Section2 .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .Section2 .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+  .Section2 .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .Section2 .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .Section2 .direct-contact-container,
+  .Section2 .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+  .Section2 .form-control,
+  textarea {
+    margin: 0 auto;
+  }
+
+  .Section2 .name,
+  .Section2 .email,
+  .Section2 textarea {
+    width: 280px;
+  }
+
+  .Section2 .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }
+  .Section2 .social-media-list {
+    left: 0;
+  }
+  .Section2 .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .Section2 .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .Section2 .send-button {
+    width: 99%;
+  }
+}

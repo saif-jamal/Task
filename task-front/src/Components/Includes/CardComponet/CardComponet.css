@@ -1,0 +1,14 @@
+.cardHeight img {
+  height: 200px;
+}
+
+.CardCompontent2 button {
+  background-color: white !important;
+}
+.wrap_text {
+  word-wrap: break-word;
+}
+
+.point {
+  cursor: pointer;
+}

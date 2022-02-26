@@ -1,0 +1,121 @@
+
+/* Left Menu */
+.left {
+    width: 57px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgb(238,110,115);
+    position: relative !important;
+    transition: all 0.5s;
+    z-index: 2000 !important;
+}
+
+.menu-heading{
+    color: white !important;
+    border-bottom: 1px solid white !important;
+    margin-top: -7px ;
+}
+@media only  screen and (max-width:991px) {
+    .left{
+        position: fixed !important;
+    }
+    .mainmeunbutton_container{
+        top: 3%;
+        left: 14%;
+    }
+    .mainmeunbutton:nth-child(2){
+        display: none;
+    }
+}
+
+.left  span{
+    display: none !important;
+}
+.left:hover .textNav{
+    transition: display 0.8s ease !important;
+    display: block !important;
+}
+.left:hover{
+    position: fixed !important;
+}
+.left:hover {
+    width: 200px;
+}
+.left:hover ul li.menu-heading {
+    opacity: 1;
+}
+.left ul {
+    padding-left: 0;
+}
+.left ul li {
+    list-style-type: none;
+}
+.left ul li.active a {
+    background:  rgb(238,110,115);
+    color: rgb(255, 255, 255);
+}
+.menu-heading:hover{
+    color: rgb(255, 255, 255) !important;
+}
+.left ul li.active a:hover {
+    background: rgba(191, 191, 191, 0.89);
+}
+.left ul li a {
+    display: flex;
+    align-items: center;
+    background: rgb(238,110,115);
+    color: white;
+    padding: 15px 10px;
+    font-size: 13px;
+    width: 200px;
+    border-bottom: 1px solid #ffffff;
+}
+.left ul li a:hover {
+    background: rgb(232, 125, 130);
+    text-decoration: none;
+}
+.left ul li a:hover i.fa {
+    color: #00b300;
+}
+.left ul li a:focus {
+    text-decoration: none;
+}
+.left ul li a i.fa {
+    width: 50px;
+    text-align: center;
+    padding-right: 15px;
+    transition: all 1s;
+}
+.left ul .menu-heading {
+    opacity: 0;
+    padding: 10px 5px 10px 10px;
+    color: #b3b300;
+    font-size: larger;
+    border-bottom: 1px solid #2b3443;
+    transition: all 0.5s;
+}
+.leftslide{
+    transition: left 1s ease-in-out !important;
+
+    left: -20% !important;
+}
+.notif:hover ,.notif a:hover{
+    background-color: transparent !important;
+}
+.navcustome{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.colornav{
+    background-color: white !important;
+}
+.colornav span,.colornav i{
+    color: rgb(238,110,115) !important;
+}
+/*nav header in left..........................*/

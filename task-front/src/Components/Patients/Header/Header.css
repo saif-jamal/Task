@@ -1,0 +1,46 @@
+.PatientHeader header {
+  background: url("https://www.drmskainthprimroselane.nhs.uk/website/M92004/files/PATIENT-Banner-e1401388366852.jpg");
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 1%, 100% 0, 100% 94%, 76% 96%, 28% 99%, 0 100%);
+}
+.PatientHeader header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #22222269 10%, #acacac6b 100%);
+}
+
+.PatientHeader h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.PatientHeader h3,
+.PatientHeader p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+}
+
+.PatientHeader button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+.PatientHeader button:hover {
+  cursor: pointer;
+}
