@@ -18,7 +18,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import CloseIcon from '@mui/icons-material/Close';
 import './Nav.css';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -69,9 +69,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Nav() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const [logindata, setlogindata] = React.useState(null);
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    React.useEffect(() => {
+        if (localStorage.getItem('userLogininfo'))
+            setlogindata(JSON.parse(localStorage.getItem('userLogininfo')));
+    }, []);
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -164,6 +170,9 @@ function Nav() {
         </Menu>
     );
 
+
+
+
     //hide self icon
     var check = 0;
     const hidemenu = (e) => {
@@ -180,6 +189,8 @@ function Nav() {
             check = 0;
         }
     }
+
+
 
     return (
         <div className='Nav' >
@@ -230,17 +241,23 @@ function Nav() {
                                     <NotificationsIcon />
                                 </Badge>
                             </IconButton>
-                            <IconButton
-                                size="large"
-                                edge="end"
-                                aria-label="account of current user"
-                                aria-controls={menuId}
-                                aria-haspopup="true"
-                                onClick={handleProfileMenuOpen}
-                                color="inherit"
-                            >
-                                <AccountCircle />
-                            </IconButton>
+                            {
+                                (logindata != null) ?
+                                    <IconButton
+                                        size="large"
+                                        edge="end"
+                                        aria-label="account of current user"
+                                        aria-controls={menuId}
+                                        aria-haspopup="true"
+                                        onClick={handleProfileMenuOpen}
+                                        color="inherit"
+                                    >
+                                        <AccountCircle />
+                                    </IconButton>
+                                    :
+                                    <Link to='/Login' className='pt-3 ps-3'> <p className='btn btn-light text-dark'>Login</p></Link>
+                            }
+
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton

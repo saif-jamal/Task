@@ -16,12 +16,12 @@ const News = lazy(() => import('./Components/News/News'));
 const NotFound = lazy(() => import('./Components/NotFound/NotFound'));
 const ViewPatient = lazy(() => import('./Components/ViewPatient/ViewPatient'));
 const ViewNews = lazy(() => import('./Components/ViewNews/ViewNews'));
-
-
-
+const Login = lazy(() => import('./Components/Account/Login/Login'));
+const Register = lazy(() => import('./Components/Account/Register/Register'));
+const Emailverfiy = lazy(() => import('./Components/Account/Emailverify/Emailverfiy'));
 
 function App() {
-  const [IPadress, setIPadress] = useState('http://192.168.0.103:8000');
+  const [IPadress, setIPadress] = useState('http://127.0.0.1:8000');
   const dispatch = useDispatch();
 
   //get all data for patients and news
@@ -85,6 +85,9 @@ function App() {
             <Route path="News" element={<News IPadress={IPadress} />} exact />
             <Route path="patients/:id" element={<ViewPatient IPadress={IPadress} />} exact />
             <Route path="news/:id" element={<ViewNews IPadress={IPadress} />} exact />
+            <Route path="Login" element={<Login IPadress={IPadress} />} exact />
+            <Route path="Register" element={<Register IPadress={IPadress} />} exact />
+            <Route path="Register/:verification_code" element={<Emailverfiy IPadress={IPadress} />} />
 
             <Route path='*' element={<NotFound />} exact />
           </Route>
