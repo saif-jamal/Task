@@ -1,0 +1,26 @@
+// add filter about date in specific day.
+           $dateDay=$input['day'];
+//           $dateDay=strtotime($dateDay);
+           $dateDay=date('Y-m-d',strtotime($dateDay));
+//          array_push($vTypeconditions,['created_at',$dateDay]);
+
+         $vehicles = Vehicle::where(
+           $vTypeconditions
+        )
+        // ->toSql();
+        ->get();
+
+         $arr_temp=[];
+
+        if(count($vehicles)>0) {
+             foreach ($vehicles as $vech) {
+//               $datatimeToDate = $vech->created_at->format('Y/m/d');
+
+                 $day_veh= $vech->created_at;
+                 if ( $day_veh->toDateString() <= $dateDay) {
+                     array_push($arr_temp, $vech);
+                 }
+             }
+         }
+
+        $vehicles = collect($arr_temp);
