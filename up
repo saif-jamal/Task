@@ -24,3 +24,60 @@
          }
 
         $vehicles = collect($arr_temp);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        $dateDay_from=$input['from'];
+        $dateDay_from=date('Y-m-d',strtotime($dateDay_from));
+
+        $dateDay_to=$input['to'];
+        $dateDay_to=date('Y-m-d',strtotime($dateDay_to));
+
+         $vehicles = Vehicle::where(
+           $vTypeconditions
+        )
+        ->get();
+
+
+
+        $arr_temp=[];
+        if(count($vehicles)>0) {
+            foreach ($vehicles as $vech) {
+                $day_veh= $vech->created_at;
+                if ( $day_veh->toDateString() <= $dateDay_to && $day_veh->toDateString() >= $dateDay_from ) {
+                    array_push($arr_temp, $vech);
+                }
+            }
+        }
+
+        $vehicles = collect($arr_temp);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
